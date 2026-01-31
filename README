@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>API de Usuários</title>
+</head>
+<body>
+
+  <h1>🚀 API de Usuários (Node.js)</h1>
+
+  <p>Uma API REST simples para listar e criar usuários, mantendo os dados em memória. Ideal para estudos de Node.js e Express.</p>
+
+  <h2>🛠️ Tecnologias</h2>
+  <ul>
+    <li><a href="https://nodejs.org/">Node.js</a></li>
+    <li><a href="https://expressjs.com/">Express</a></li>
+    <li><a href="https://nodemon.io/">Nodemon</a> (para desenvolvimento)</li>
+  </ul>
+
+  <h2>📦 Instalação e Configuração</h2>
+  <p>Clone o projeto e rode o comando abaixo para instalar <strong>todas</strong> as dependências (incluindo Express e Nodemon):</p>
+  
+  <pre><code>npm install</code></pre>
+
+  <blockquote>
+    <strong>Nota:</strong> O Nodemon já está configurado no seu <em>package.json</em>, então ele será instalado automaticamente.
+  </blockquote>
+
+  <h2>▶️ Como Rodar</h2>
+
+  <h3>Modo Desenvolvimento (com Nodemon)</h3>
+  <p>Reinicia automaticamente ao salvar alterações:</p>
+  <pre><code>npm run dev</code></pre>
+
+  <h3>Modo Padrão</h3>
+  <pre><code>node index.js</code></pre>
+
+  <p>O servidor rodará em: <code>http://localhost:3000</code></p>
+
+  <h2>🔗 Rotas da API</h2>
+
+  <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Método</th>
+        <th>Rota</th>
+        <th>Descrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GET</strong></td>
+        <td><code>/usuario</code></td>
+        <td>Retorna a lista de usuários.</td>
+      </tr>
+      <tr>
+        <td><strong>POST</strong></td>
+        <td><code>/usuario</code></td>
+        <td>Cria um novo usuário.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Exemplo de JSON para o POST:</h3>
+  <pre><code>{
+  "name": "Seu Nome",
+  "age": 25
+}</code></pre>
+
+  <h2>📝 Como Testar</h2>
+  <p>Como não há Front-end, utilize o <strong>Insomnia
