@@ -1,71 +1,126 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>API de Usuários</title>
-</head>
-<body>
+Aqui está o código completo do **README.md**. Você pode copiar o conteúdo abaixo e colar diretamente no seu arquivo.
 
-  <h1>🚀 API de Usuários (Node.js)</h1>
+```markdown
+# 🚀 API de Usuários (Node.js)
 
-  <p>Uma API REST simples para listar e criar usuários, mantendo os dados em memória. Ideal para estudos de Node.js e Express.</p>
+Uma API REST simples para listar e criar usuários, mantendo os dados em memória. Este projeto é ideal para estudos introdutórios de **Node.js** e **Express**.
 
-  <h2>🛠️ Tecnologias</h2>
-  <ul>
-    <li><a href="https://nodejs.org/">Node.js</a></li>
-    <li><a href="https://expressjs.com/">Express</a></li>
-    <li><a href="https://nodemon.io/">Nodemon</a> (para desenvolvimento)</li>
-  </ul>
+> **Aviso:** Como os dados são salvos em variáveis locais (memória), reiniciar o servidor limpará a lista de usuários cadastrados.
 
-  <h2>📦 Instalação e Configuração</h2>
-  <p>Clone o projeto e rode o comando abaixo para instalar <strong>todas</strong> as dependências (incluindo Express e Nodemon):</p>
-  
-  <pre><code>npm install</code></pre>
+## 🛠️ Tecnologias Utilizadas
 
-  <blockquote>
-    <strong>Nota:</strong> O Nodemon já está configurado no seu <em>package.json</em>, então ele será instalado automaticamente.
-  </blockquote>
+* [Node.js](https://nodejs.org/)
+* [Express](https://expressjs.com/)
+* [Nodemon](https://nodemon.io/) (Dev dependency)
 
-  <h2>▶️ Como Rodar</h2>
+## 📦 Instalação e Configuração
 
-  <h3>Modo Desenvolvimento (com Nodemon)</h3>
-  <p>Reinicia automaticamente ao salvar alterações:</p>
-  <pre><code>npm run dev</code></pre>
+### Pré-requisitos
+Antes de começar, você precisa ter o [Git](https://git-scm.com) e o [Node.js](https://nodejs.org/en/) instalados em sua máquina.
 
-  <h3>Modo Padrão</h3>
-  <pre><code>node index.js</code></pre>
+### Passo a passo
 
-  <p>O servidor rodará em: <code>http://localhost:3000</code></p>
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/seu-usuario/nome-do-repo.git](https://github.com/seu-usuario/nome-do-repo.git)
 
-  <h2>🔗 Rotas da API</h2>
+```
 
-  <table border="1" cellpadding="10" cellspacing="0">
-    <thead>
-      <tr>
-        <th>Método</th>
-        <th>Rota</th>
-        <th>Descrição</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>GET</strong></td>
-        <td><code>/usuario</code></td>
-        <td>Retorna a lista de usuários.</td>
-      </tr>
-      <tr>
-        <td><strong>POST</strong></td>
-        <td><code>/usuario</code></td>
-        <td>Cria um novo usuário.</td>
-      </tr>
-    </tbody>
-  </table>
+2. Acesse a pasta do projeto:
+```bash
+cd nome-do-repo
 
-  <h3>Exemplo de JSON para o POST:</h3>
-  <pre><code>{
-  "name": "Seu Nome",
-  "age": 25
-}</code></pre>
+```
 
-  <h2>📝 Como Testar</h2>
-  <p>Como não há Front-end, utilize o <strong>Insomnia
+
+3. Instale as dependências:
+```bash
+npm install
+
+```
+
+
+> **Nota:** O Nodemon já está configurado no `package.json`, então ele será instalado automaticamente.
+
+
+
+## ▶️ Como Rodar
+
+### Modo Desenvolvimento
+
+Utiliza o Nodemon para reiniciar o servidor automaticamente ao salvar alterações:
+
+```bash
+npm run dev
+
+```
+
+### Modo Produção (Padrão)
+
+```bash
+node index.js
+
+```
+
+O servidor estará rodando em: `http://localhost:3000`
+
+---
+
+## 🔗 Endpoints da API
+
+| Método | Rota | Descrição |
+| --- | --- | --- |
+| **GET** | `/usuario` | Retorna a lista de usuários |
+| **POST** | `/usuario` | Cria um novo usuário |
+
+### 📝 Exemplos de Requisição
+
+#### 1. Criar Usuário (POST)
+
+**Rota:** `POST /usuario`
+
+**Body (JSON):**
+
+```json
+{
+  "name": "Maria Silva",
+  "age": 28
+}
+
+```
+
+#### 2. Listar Usuários (GET)
+
+**Rota:** `GET /usuario`
+
+**Response (Exemplo):**
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Maria Silva",
+    "age": 28
+  }
+]
+
+```
+
+---
+
+## 🧪 Como Testar
+
+Como esta API não possui Front-end, você deve utilizar ferramentas para testar as rotas:
+
+* **[Insomnia](https://insomnia.rest/download)** (Recomendado)
+* **[Postman](https://www.postman.com/)**
+* **VS Code (Extensão Thunder Client)**
+
+### Teste rápido via Terminal (cURL)
+
+Se você usa Linux ou Mac, pode testar rapidamente colando isso no terminal:
+
+```bash
+curl -X POST http://localhost:3000/usuario -H "Content-Type: application/json" -d '{"name": "Teste", "age": 99}'
+
+```
