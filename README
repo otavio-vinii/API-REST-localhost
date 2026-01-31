@@ -1,6 +1,3 @@
-Aqui está o código completo do **README.md**. Você pode copiar o conteúdo abaixo e colar diretamente no seu arquivo.
-
-```markdown
 # 🚀 API de Usuários (Node.js)
 
 Uma API REST simples para listar e criar usuários, mantendo os dados em memória. Este projeto é ideal para estudos introdutórios de **Node.js** e **Express**.
